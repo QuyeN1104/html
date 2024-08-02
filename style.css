@@ -1,0 +1,28 @@
+#label {
+    font-size: 100px;
+    font-family: Helvetica 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.buttons{
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 2px;
+    background-color: rgb(94, 218, 218);
+    transform: background-color 0.2s;
+    font-style: inherit;
+    font-size: larger;
+    font-weight: 200;
+    
+}
+.buttons:hover{
+    cursor: pointer;
+    background-color: rgb(135, 238, 238);
+}
