@@ -3,6 +3,8 @@ const min = document.getElementById("minCounter");
 const minlbl = document.getElementById("minlbl");
 const seclbl = document.getElementById("seclbl");
 const btn = document.getElementById("btn");
+const timeUp = document.getElementById("soundup");
+const timeRun = document.getElementById("soundrun");
 
 let intervalId; 
 let isRunning = false;
@@ -26,24 +28,30 @@ sec.addEventListener('change',() => {
   updateSeconds(sec.value);
 });
 
-function countdown(min,sec) {
-
+function countdown(minutes,seconds) {
+  let min = minutes, sec = seconds;
   intervalId = setInterval(() => {
-    updateSeconds(sec);
-    updateMinutes(min);
-    sec--;
-    if (sec < 0 ) {
+    if (sec < 1 ) {
       if(min > 0){
         min -= 1;
         sec += 60;
       }
       else{
       clearInterval(intervalId);
+      timeRun.pause();
+      timeUp.play();
+
       }
     }
+    timeRun.play();
+    sec--;
+    updateSeconds(sec);
+    updateMinutes(min);
   }, 1000);
 }
 
+
+// while(1) timeRun.play();
 
 btn.onclick = function() {
   if(!isRunning){
@@ -52,8 +60,8 @@ btn.onclick = function() {
   }
   else{
     clearInterval(intervalId);
-    updateMinutes(0);
-    updateSeconds(0);
+    updateMinutes(min.value);
+    updateSeconds(sec.value);
     isRunning = false;
   }
 };

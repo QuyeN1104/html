@@ -53,6 +53,7 @@ body, html {
     background-color: white;
     color: rgb(9, 9, 9);
     width: 40px;
+    text-align: center;
 }
 
 #minCounter {
@@ -60,6 +61,7 @@ body, html {
     margin-right: 4px;
     background-color: white;
     width: 40px;
+    text-align: center;
 }
 
 /* Định dạng cho thẻ button */
