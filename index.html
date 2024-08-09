@@ -7,13 +7,18 @@
     <link rel = "stylesheet" href="style.css">
 </head>
 <body>
-    <label id = "label"> 0 </label>
-    <div id = "container"> 
-        <button id = "inc" class = "buttons"> increasing</button><!--
-        --><button id = "res" class = "buttons"> reset</button><!--
-        --><button id = "dec" class = "buttons"> decreasing</button>
-    
-
+    <div class="wrapper">
+        <div class = "timer">
+        <l id = "minlbl">00</l>
+        <l>:</l>
+        <l id = "seclbl">00</l>
+        </div>
+        <br>
+    <div class = "input">
+        <input type="text" placeholder="sec" id = "secCounter"> 
+        <input type="text" placeholder = "min" id = "minCounter">
+    </div>
+        <button type="submit"  id = "btn"> set</button>
     </div>
     <script src="script.js"></script>
 </body>
